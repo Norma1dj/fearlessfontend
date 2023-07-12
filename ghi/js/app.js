@@ -12,7 +12,8 @@ function createCard(name, description, pictureUrl, starts, ends, location) {
     const formattedEnds = formatDate(ends);
 
     return `
-      <div class="card">
+    
+      <div class="card w-25 m-3">
         <img src="${pictureUrl}" class="card-img-top">
         <div class="card-body"> 
           <h5 class="card-title">${name}</h5>
@@ -24,13 +25,15 @@ function createCard(name, description, pictureUrl, starts, ends, location) {
         </div>
 
       </div>
+      
+      
     `;
   }
 
 window.addEventListener('DOMContentLoaded', async () => {
 
     const url = 'http://localhost:8000/api/conferences/';
-
+    const cardContainers = document.querySelectorAll('.card-columns');
 
     try {
       const response = await fetch(url);
@@ -40,6 +43,7 @@ window.addEventListener('DOMContentLoaded', async () => {
         // Figure out what to do when the response is bad
       } else {
         const data = await response.json();
+        const cardContainers = document.querySelectorAll('.card-columns');
         
         for (let conference of data.conferences) {
             const detailUrl = `http://localhost:8000${conference.href}`;
@@ -54,8 +58,10 @@ window.addEventListener('DOMContentLoaded', async () => {
               const pictureUrl = details.conference.location.picture_url;
               const location = details.conference.location.name;
               const html = createCard(name, description, pictureUrl, starts, ends, location);
-              const column = document.querySelector('.col');
-                column.innerHTML += html;
+            //   const column = document.querySelector('.col');
+            //     column.innerHTML += html;
+                const targetContainer = cardContainers[Math.floor(Math.random() * cardContainers.length)];
+                targetContainer.innerHTML += html;
 
             }
           }
