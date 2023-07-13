@@ -1,8 +1,4 @@
 
-// calling a RESTful API get the data back, then loop through it.
-// And for each state in it, it'll create an option element that 
-// has a value of the abbreviation and the text of the name.
-
 // We need to add an event listener for when the DOM loads.
 window.addEventListener('DOMContentLoaded', async () => {
 
