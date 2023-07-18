@@ -48,6 +48,7 @@ class Presentation(models.Model):
         related_name="presentations",
         on_delete=models.PROTECT,
     )
+    
 
     conference = models.ForeignKey(
         "events.Conference",

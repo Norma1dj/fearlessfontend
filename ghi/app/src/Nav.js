@@ -1,4 +1,4 @@
-
+import { NavLink } from "react-router-dom";
 
 function Nav(props) {
     return (
@@ -14,10 +14,19 @@ function Nav(props) {
               <a className="nav-link active" aria-current="page" href="#">Home</a>
             </li>
             <li className="nav-item">
-              <a className="nav-link" aria-current="page" href="new-location.html">New location</a>
+              <NavLink className="nav-link" aria-current="page" to="/locations/new">New location</NavLink>
             </li>
             <li className="nav-item">
-              <a className="nav-link" aria-current="page" href="new-conference.html">New Conference</a>
+              <NavLink className="nav-link" aria-current="page" to="/conferences/new">New Conference</NavLink>
+            </li>
+            <li className="nav-item">
+              <NavLink className="nav-link" aria-current="page" to="/attendees/new">New Conference</NavLink>
+            </li>
+            <li className="nav-item">
+              <NavLink className="nav-link" aria-current="page" to="/presentantions/new">New Presentation</NavLink>
+            </li>
+            <li className="nav-item">
+              <NavLink className="nav-link" aria-current="page" to="/attendees">Attendee List</NavLink>
             </li>
           </ul>
         </div>
