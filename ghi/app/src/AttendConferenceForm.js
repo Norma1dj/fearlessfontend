@@ -87,6 +87,15 @@ function AttendConferenceForm() {
       }, []);
 
     return(
+      <div className="container">
+    <div className="my-5">
+      <div className="row">
+        <div className="col col-sm-auto">
+          <img width="300" className="bg-white rounded shadow d-block mx-auto mb-4" src="/logo.svg"/>
+        </div>
+        <div className="col">
+          <div className="card shadow">
+            <div className="card-body"></div>
         <form onSubmit={handleSubmit} id="create-attendee-form">
                 <h1 className="card-title">It's Conference Time!</h1>
                 <p className="mb-3">
@@ -125,6 +134,16 @@ function AttendConferenceForm() {
                 </div>
                 <button className="btn btn-lg btn-primary">I'm going!</button>
               </form>
+              <div className="alert alert-success d-none mb-0" id="success-message">
+                Congratulations! You're all signed up!
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  
+
     
         );
 }
