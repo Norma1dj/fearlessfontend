@@ -11,7 +11,7 @@ function Nav(props) {
         <div className="collapse navbar-collapse" id="navbarSupportedContent">
           <ul className="navbar-nav me-auto mb-2 mb-lg-0">
             <li className="nav-item">
-              <a className="nav-link active" aria-current="page" href="#">Home</a>
+              <NavLink className="nav-link active" aria-current="page" to="/home">Home</NavLink>
             </li>
             <li className="nav-item">
               <NavLink className="nav-link" aria-current="page" to="/locations/new">New location</NavLink>
@@ -20,7 +20,7 @@ function Nav(props) {
               <NavLink className="nav-link" aria-current="page" to="/conferences/new">New Conference</NavLink>
             </li>
             <li className="nav-item">
-              <NavLink className="nav-link" aria-current="page" to="/attendees/new">New Conference</NavLink>
+              <NavLink className="nav-link" aria-current="page" to="/attendees/new">Attend Conference</NavLink>
             </li>
             <li className="nav-item">
               <NavLink className="nav-link" aria-current="page" to="/presentantions/new">New Presentation</NavLink>
